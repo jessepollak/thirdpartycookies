@@ -36,4 +36,6 @@ gulp.task 'watch', ->
     gulp.watch './static/src/coffee/**/*.coffee', ['browserify']
 
 # Default task call every tasks created so far.
-gulp.task 'default', ['scss', 'browserify']
+gulp.task 'build', ['scss', 'browserify']
+gulp.task 'heroku:production', ['build']
+gulp.task 'default', ['build']

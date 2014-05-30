@@ -20,7 +20,6 @@
     "ejs": "~1.0.0",
     "morgan": "~1.1.1",
     "express-partials": "~0.2.0",
-    "coffee-script": "~1.7.1",
-    "useragent": "~2.0.8"
+    "coffee-script": "~1.7.1"
   }
 }
