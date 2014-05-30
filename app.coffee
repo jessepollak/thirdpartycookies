@@ -27,4 +27,4 @@ app.get '/*', (req, res) ->
 
     res.render "browsers/#{browser}", layout: 'base', domain: path
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
