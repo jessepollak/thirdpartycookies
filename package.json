@@ -21,6 +21,8 @@
     "gulp-rename": "~1.2.0",
     "useragent": "~2.0.8",
     "gulp-changed": "~0.3.0",
-    "gulp-imagemin": "~0.5.1"
+    "gulp-imagemin": "~0.5.1",
+    "envify": "~1.2.1",
+    "react": "~0.10.0"
   }
 }

@@ -1,2 +1,55 @@
 @import 'settings';
 @import 'foundation/scss/foundation';
+
+.header {
+    img {
+        margin: 30px 0;
+    }
+}
+
+.content {
+    ol.guide {
+        list-style: none;
+        counter-reset: li;
+        li {
+            &:before {
+                $size: 40px;
+                content: counter(li);
+                counter-increment:li;
+                text-align: center;
+                display: block;
+                width: $size;
+                margin: 40px auto 10px auto;
+                height: $size;
+                line-height: $size;
+                background: #333;
+                color: white;
+                font-size: emCalc(25px);
+                font-weight: bold;
+                border-radius: $size / 2;
+            }
+            p {
+                text-align: center;
+                font-size: emCalc(20px);
+                i {
+                    font-style: normal;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.typing-screenshot {
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    span {
+        position: absolute;
+        font-size: 8px;
+        font-weight: bold;
+        color: #777;
+    }
+}

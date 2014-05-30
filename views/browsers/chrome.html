@@ -1,45 +1,67 @@
 <div class="browser">
-     <div class="row header">
-        <div class="large-12 columns">
-            <h1>Enabled 3rd party cookies for <%= domain %> in Chrome</h1>
+     <div class="header">
+        <div class="row">
+            <div class="large-2 columns large-centered">
+                <img class="text-center" src="/dist/img/chrome/logo.png" alt="Chrome">
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <h2 class="text-center">how to enable 3rd party cookies for <br> the domain <b><%= domain %></b> in the browser <b>chrome</b></h2>
+            </div>
         </div>
     </div>
     <div class="content row">
         <div class="large-12 columns">
             <ol class="guide">
                 <li>
-                    <p class="label">Open a <a href="about://settings" target="_blank">new window</a> and type <b>chrome://settings</b> into the URL bar.</p>
+                    <p>Open a <a href="about://settings" target="_blank">new window</a> and type <b>chrome://settings</b> into the URL bar.</p>
                 </li>
                 <li>
-                    <p class="label">You should now be on the Chrome Settings page.</p>
+                    <p>You should now be on the Chrome Settings page.</p>
                     <img src="/dist/img/chrome/settings.png" alt="chrome settings page">
                 </li>
                 <li>
-                    <p class="label">Find the <b>Search</b> box in the top right corner.</p>
+                    <p>Find the <b>Search</b> box in the top right corner.</p>
                     <img src="/dist/img/chrome/search-enter.png" alt="chrome settings page search box">
                 </li>
                 <li>
-                    <p class="label">Search for <i>Content Settings</i> in the search box.</p>
+                    <p>Search for <b>Content Settings</b> in the search box.</p>
                     <img src="/dist/img/chrome/search-type.png" alt="search for content settings in search box">
                 </li>
                 <li>
-                    <p class="label">Click the <i>Content Settings</i> button.</p>
+                    <p>Click the <b>Content Settings</b> button.</p>
                     <img src="/dist/img/chrome/search-click.png" alt="click the content settings button">
                 </li>
                 <li>
-                    <p class="label">Click the <i>Manage Excpetions</i> button.</p>
+                    <p>Click the <b>Manage Exceptions</b> button.</p>
                     <img src="/dist/img/chrome/manage-click.png" alt="click the manage settings button">
                 </li>
                 <li>
-                    <p class="label">Type <i>[*.]<%= domain %></i> into the left field and select <i>Allow</i> on the right.</p>
-                    <img src="/dist/img/chrome/exception-type.png" alt="search for content settings in search box">
+                    <p>Type <b>[*.]<%= domain %></b> into the left field and select <b>Allow</b> on the right.</p>
+                    <div class="screenshot"
+                        data-src="/dist/img/chrome/exception-type.png"
+                        data-alt="type <%= domain %> into the left field and select Allow"
+                        data-text="[*.]<%= domain %>"
+                        data-left="35"
+                        data-top="43"
+                        data-type='true'
+                    >
+                    </div>
                 </li>
                 <li>
-                    <p class="label">Hit the <i>Enter</i> button and it should submit your changes.</p>
-                    <img src="/dist/img/chrome/exception-done.png" alt="search for content settings in search box">
+                    <p>Hit the <b>Enter</b> button on your keyboard and your changes will be saved</p>
+                    <div class="screenshot"
+                        data-src="/dist/img/chrome/exception-done.png"
+                        data-alt="hit Enter to save your changes"
+                        data-text="[*.]<%= domain %>"
+                        data-left="35"
+                        data-top="43"
+                    >
+                    </div>
                 </li>
                 <li>
-                    <p class="label">Close the settings window and return to what you were doing!</p>
+                    <p>Close the settings window and return to what you were doing!</p>
                 </li>
             </ol>
         </div>

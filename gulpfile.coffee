@@ -23,6 +23,7 @@ gulp.task 'browserify', ->
       debug: true
       transform: ['coffeeify']
       extensions: ['.coffee']
+    .on 'error', console.log
     .pipe livereload(server)
     .pipe rename('app.js')
     .pipe gulp.dest('./static/dist/js')
@@ -36,7 +37,7 @@ gulp.task 'images', ->
     .pipe gulp.dest(output)
 
 gulp.task 'server', ->
-  spawn 'nodemon', ['app.coffee'], stdio: 'inherit'
+  spawn 'nodemon', ['app.coffee', '--watch', './app.coffee'], stdio: 'inherit'
 
 gulp.task 'watch', ->
   server.listen 35729, ->
