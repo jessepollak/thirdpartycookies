@@ -19,6 +19,8 @@
     "nodemon": "~1.1.1",
     "coffeeify": "~0.6.0",
     "gulp-rename": "~1.2.0",
-    "useragent": "~2.0.8"
+    "useragent": "~2.0.8",
+    "gulp-changed": "~0.3.0",
+    "gulp-imagemin": "~0.5.1"
   }
 }
