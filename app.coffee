@@ -22,7 +22,7 @@ app.get '/*', (req, res) ->
 
   browser = useragent.parse(req.headers['user-agent']).family
   browser = browser.toLowerCase() if browser
-  if browser not in ['chrome']
+  if browser not in ['chrome', 'firefox']
     return res.render 'unsupported', layout: 'base'
 
   res.render "browsers/#{browser}", layout: 'base', domain: path

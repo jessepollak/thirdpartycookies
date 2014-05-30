@@ -6,12 +6,19 @@ Screenshot = React.createClass
   displayName: 'Screenshot'
   tickTime: 200
   tickMultiplier: 4
+  getDefaultProps: ->
+    color: '#333'
   getInitialState: ->
     if @props.type
       text: ''
     else
       text: @props.text
   componentDidMount: ->
+    i = @refs.img.getDOMNode()
+    i.onload = =>
+      @computeTextPlacement()
+      @setState hasLoaded: true
+
     if @props.type
       @textLength = @props.text.length
       setTimeout @tick, @tickTime
@@ -31,17 +38,32 @@ Screenshot = React.createClass
 
     @setState text: nextText
     setTimeout @tick, timeout
-  render: ->
-    (div className: 'typing-screenshot',
-      (img src: @props.src, alt: @props.alt)
-      (span
-        style:
-          top: "#{@top}%"
-          left: "#{@left}%"
-        @state.text
-      )
-    )
+  computeTextPlacement: ->
+    i = @refs.img.getDOMNode()
 
+    @left = (parseInt(@props.left)) / i.naturalWidth * 100
+    @top = parseInt(@props.top) / i.naturalHeight * 100
+
+    @lineHeight = parseInt(@props.height) / i.naturalHeight * i.clientHeight
+    @fontSize = @lineHeight * .6
+  render: ->
+    if not @state.hasLoaded
+      internals = [(img ref: 'img', src: @props.src, alt: @props.alt)]
+    else
+      internals = [
+        (img ref: 'img', src: @props.src, alt: @props.alt),
+        (span
+          style:
+            top: "#{@top}%"
+            left: "#{@left}%"
+            fontSize: @fontSize
+            lineHeight: "#{@lineHeight}px"
+            color: @props.color
+          @state.text
+        )
+      ]
+
+    (div className: 'typing-screenshot', internals...)
 
 for s in document.querySelectorAll('.screenshot')
   React.renderComponent(
@@ -51,6 +73,7 @@ for s in document.querySelectorAll('.screenshot')
       text: s.getAttribute('data-text')
       left: s.getAttribute('data-left')
       top: s.getAttribute('data-top')
+      height: s.getAttribute('data-height')
       type: s.getAttribute('data-type')
     s
   )

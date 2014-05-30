@@ -19,7 +19,7 @@
                 text-align: center;
                 display: block;
                 width: $size;
-                margin: 40px auto 10px auto;
+                margin: 30px auto 20px auto;
                 height: $size;
                 line-height: $size;
                 background: #333;
@@ -35,6 +35,18 @@
                     font-style: normal;
                     text-decoration: underline;
                 }
+                &.collapse-bottom {
+                    margin-bottom: 0;
+                }
+                &.small {
+                    margin-top: 0;
+                    font-size: emCalc(16px);
+                    color: #AAA;
+                }
+            }
+            img {
+                display: block;
+                margin: auto;
             }
         }
     }

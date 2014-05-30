@@ -37,7 +37,7 @@ gulp.task 'images', ->
     .pipe gulp.dest(output)
 
 gulp.task 'server', ->
-  spawn 'nodemon', ['app.coffee', '--watch', './app.coffee'], stdio: 'inherit'
+  spawn 'nodemon', ['app.coffee', '--watch', 'app.coffee'], stdio: 'inherit'
 
 gulp.task 'watch', ->
   server.listen 35729, ->

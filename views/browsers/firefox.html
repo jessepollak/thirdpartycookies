@@ -1,0 +1,68 @@
+<div class="browser">
+     <div class="header">
+        <div class="row">
+            <div class="medium-2 columns medium-centered small-4 small-centered">
+                <img class="text-center" src="/dist/img/firefox/logo.png" alt="Firefox">
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <h2 class="text-center">how to enable 3rd party cookies for <br> the domain <b><%= domain %></b> in the browser <b>firefox</b></h2>
+            </div>
+        </div>
+    </div>
+    <div class="content row">
+        <div class="large-12 columns">
+            <ol class="guide">
+                <li>
+                    <p>Click the <b>Hamburger</b> button in the top right of your browser window.</p>
+                    <img src="/dist/img/firefox/newtab.png" alt="firefox settings menu">
+                </li>
+                <li>
+                    <p>Click the <b>Preferences</b> option in the menu that pops up</p>
+                    <img src="/dist/img/firefox/menu.png" alt="firefox settings menu">
+                </li>
+                <li>
+                    <p>In the new window that pops up, click the <b>Privacy</b> tab</p>
+                    <img src="/dist/img/firefox/preferences.png" alt="firefox preferences privacy">
+                </li>
+                <li>
+                    <p class="collapse-bottom">In the Privacy tab, click the <b>Exceptions</b> button.</p>
+                    <p class="small">If you don't see it, 3rd party cookies should be enabled already.</p>
+                    <img src="/dist/img/firefox/exceptions-click.png" alt="firefox 3rd party cookies exception button">
+                </li>
+                <li>
+                    <p>Type <b><%= domain %></b> into the <u>Address of website</u> field and click <b>Allow</b>.</p>
+                    <div class="screenshot"
+                        data-src="/dist/img/firefox/exceptions-type.png"
+                        data-alt="type <%= domain %> into the field and click allow"
+                        data-text="<%= domain %>"
+                        data-left="80"
+                        data-top="133"
+                        data-height="19"
+                        data-width="780"
+                        data-type='true'
+                    >
+                    </div>
+                </li>
+                <li>
+                    <p>Your changes should now be saved.</p>
+                    <div class="screenshot"
+                        data-src="/dist/img/firefox/exceptions-enter.png"
+                        data-alt="type <%= domain %> into the field and click allow"
+                        data-text="<%= domain %>"
+                        data-left="80"
+                        data-top="209"
+                        data-height="22"
+                        data-width="780"
+                        data-color="#111"
+                    >
+                    </div>
+                </li>
+                <li>
+                    <p>Close the settings window and return to what you were doing!</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
