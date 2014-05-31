@@ -16,12 +16,18 @@ app.set('view engine', 'html')
 app.get '/', (req, res) ->
   res.render 'index', layout: 'base'
 
+
 app.get '/*', (req, res) ->
   # grab the path and strip the leading slash
   path = url.parse(req.url).path.slice(1)
+  if matches = path.match /(.*)\/(.*)/
+    console.log matches
+    path = matches[1]
+    browser = matches[2]
+  else
+    browser = useragent.parse(req.headers['user-agent']).family
+    browser = browser.toLowerCase() if browser
 
-  browser = useragent.parse(req.headers['user-agent']).family
-  browser = browser.toLowerCase() if browser
   if browser not in ['chrome', 'firefox']
     return res.render 'unsupported', layout: 'base'
 

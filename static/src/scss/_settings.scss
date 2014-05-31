@@ -37,11 +37,12 @@
 // $total-columns: 12;
 
 // Global
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Arvo", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -128,17 +129,17 @@
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(25);
+$h2-font-size: rem-calc(20);
+$h3-font-size: rem-calc(18);
+$h4-font-size: rem-calc(19);
+$h5-font-size: rem-calc(17);
+$h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
-// $subheader-font-weight: $font-weight-normal;
+$subheader-font-weight: 300;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
 

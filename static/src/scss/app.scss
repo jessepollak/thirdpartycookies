@@ -1,67 +1,151 @@
 @import 'settings';
 @import 'foundation/scss/foundation';
 
-.header {
-    img {
-        margin: 30px 0;
+p, input, div {
+    &.small {
+        font-size: emCalc(14px); color: #aaa;
+        a {
+            color: #777;
+            &:hover {
+                color: #999;
+            }
+        }
+    }
+    &.collapse-bottom {
+        margin-bottom: 0;
     }
 }
 
-.content {
-    ol.guide {
-        list-style: none;
-        counter-reset: li;
-        li {
-            &:before {
-                $size: 40px;
-                content: counter(li);
-                counter-increment:li;
-                text-align: center;
-                display: block;
-                width: $size;
-                margin: 30px auto 20px auto;
-                height: $size;
-                line-height: $size;
-                background: #333;
-                color: white;
-                font-size: emCalc(25px);
-                font-weight: bold;
-                border-radius: $size / 2;
+.index {
+    margin: 50px auto;
+    p.credit {
+        margin-top: 5px;
+        color: #aaa;
+        a {
+            color: #777;
+        }
+    }
+}
+
+.home {
+    padding: 50px;
+    border: 1px solid #EEE;
+    img {
+        max-width: 200px;
+        margin-bottom: 30px;
+    }
+
+    .form {
+        margin: 30px 0;
+        input[type="text"] {
+            border: 1px solid #333;
+            &:focus {
+                box-shadow: none;
             }
-            p {
-                text-align: center;
-                font-size: emCalc(20px);
-                i {
-                    font-style: normal;
-                    text-decoration: underline;
-                }
-                &.collapse-bottom {
-                    margin-bottom: 0;
-                }
-                &.small {
-                    margin-top: 0;
-                    font-size: emCalc(16px);
-                    color: #AAA;
-                }
+        }
+        .columns {
+            padding-left: 0;
+        }
+
+        .button {
+            background: #333;
+            &:hover {
+                background: #111;
             }
-            img {
-                display: block;
-                margin: auto;
+        }
+    }
+
+    .supported {
+        img {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        .columns {
+            padding-right: 0;
+        }
+        h4 {
+            margin-bottom: 0;
+        }
+        a {
+            display: block;
+            opacity: .3;
+            &:hover {
+                opacity: .7;
             }
         }
     }
 }
 
-.typing-screenshot {
-    position: relative;
-    img {
-        width: 100%;
-        height: 100%;
+.browser {
+    .header {
+        img {
+            margin: 10px 0;
+        }
+        margin: 50px;
     }
-    span {
-        position: absolute;
-        font-size: 8px;
-        font-weight: bold;
-        color: #777;
+
+    .content {
+        border: 1px solid #eee;
+        ol.guide {
+            list-style: none;
+            counter-reset: li;
+            li {
+                &:before {
+                    $size: 40px;
+                    content: counter(li);
+                    counter-increment:li;
+                    text-align: center;
+                    display: block;
+                    width: $size;
+                    margin: 30px auto 20px auto;
+                    height: $size;
+                    line-height: $size;
+                    background: #333;
+                    color: white;
+                    font-size: emCalc(25px);
+                    font-weight: bold;
+                    border-radius: $size / 2;
+                }
+                p {
+                    text-align: center;
+                    font-size: emCalc(20px);
+                    i {
+                        font-style: normal;
+                        text-decoration: underline;
+                    }
+                    &.small {
+                        margin-top: 0;
+                        font-size: emCalc(16px);
+                        color: #AAA;
+                    }
+                }
+                img {
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
     }
+
+    .typing-screenshot {
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        span {
+            position: absolute;
+            font-size: 8px;
+            font-weight: bold;
+            color: #777;
+        }
+    }
+
+
+    .cookies {
+        display: block;
+        width: 100px;
+        margin: 30px auto;
+    }
+
 }

@@ -1,3 +1,4 @@
+$ = require 'jquery'
 window.React = React = require 'react'
 
 {div, img, span} = React.DOM
@@ -15,7 +16,7 @@ Screenshot = React.createClass
       text: @props.text
   componentDidMount: ->
     i = @refs.img.getDOMNode()
-    i.onload = =>
+    $(i).on 'load',  =>
       @computeTextPlacement()
       @setState hasLoaded: true
 
@@ -78,3 +79,7 @@ for s in document.querySelectorAll('.screenshot')
     s
   )
 
+$('form').on 'submit', (e) ->
+  e.preventDefault()
+  domain = $('input[name="domain"]').val()
+  window.location = "/#{domain}"
