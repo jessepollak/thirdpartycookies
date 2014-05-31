@@ -21,6 +21,7 @@ Give someone the link `thirdpartycook.ies/domain.com` and they'll be walked thro
 We need contributions to get better browser compatility coverage.
 
 * Firefox <29
+* Safari (all versions)
 * Opera (all versions)
 * IE 8
 * IE 9
