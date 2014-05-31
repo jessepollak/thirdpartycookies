@@ -27,4 +27,4 @@ We need contributions to get better browser compatility coverage.
 * IE 10
 * IE 11
 
-To contribute, clone the repository, and add a new browser guide.
+To contribute, clone the repository and add a new browser guide.
