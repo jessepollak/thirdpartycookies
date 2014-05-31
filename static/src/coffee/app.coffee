@@ -1,5 +1,6 @@
 $ = require 'jquery'
 window.React = React = require 'react'
+url = require 'url'
 
 {div, img, span} = React.DOM
 
@@ -81,5 +82,8 @@ for s in document.querySelectorAll('.screenshot')
 
 $('form').on 'submit', (e) ->
   e.preventDefault()
-  domain = $('input[name="domain"]').val()
-  window.location = "/#{domain}"
+  value = $('input[name="domain"]').val()
+  if not value.match /https?\:\/\//
+    value = "http://#{value}"
+  domain = url.parse(value)
+  window.location = "/#{domain.hostname}"
