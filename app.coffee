@@ -29,7 +29,7 @@ app.get '/*', (req, res) ->
     browser = browser.toLowerCase() if browser
 
   if browser not in ['chrome', 'firefox']
-    return res.render 'unsupported', layout: 'base'
+    return res.redirect 'http://feedjit.com/static/howToEnableThirdPartyCookies.html'
 
   res.render "browsers/#{browser}", layout: 'base', domain: path
 
