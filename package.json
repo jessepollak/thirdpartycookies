@@ -24,6 +24,7 @@
     "gulp-imagemin": "~0.5.1",
     "envify": "~1.2.1",
     "react": "~0.10.0",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "newrelic": "~1.8.1"
   }
 }

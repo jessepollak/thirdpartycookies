@@ -1,3 +1,4 @@
+require 'newrelic'
 express = require 'express'
 logger = require 'morgan'
 partials = require 'express-partials'
